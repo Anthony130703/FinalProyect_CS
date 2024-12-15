@@ -5,6 +5,7 @@
 #include <string>
 #include "hojaCalculo.h"  // Asegúrate de incluir la clase Spreadsheet si está definida en otro archivo
 
-void EditCelda(hojaCalculo& hoja);
+
+void EditCelda(HojaCalculo& hoja);
 
 #endif // EDITCELDA_H

@@ -3,7 +3,7 @@
 using namespace std;
 
 namespace utilidad {
-    inline bool esDígito(char c) {
+    inline bool esDigito(char c) {
         return (c >= '0' && c <= '9');
     }
 
@@ -11,16 +11,16 @@ namespace utilidad {
         return ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'));
     }
 
-    inline bool cadenaInt(const string& str, int& value) {
+    inline bool cadenaInt(const string& str, int& valor) {
         try {
-            value = stoi(str);
+            valor = stoi(str);
             return true;
         } catch (... ) {
             return false;
         }
     }
 
-    inline double canedaDouble(const string& str) {
+    inline double cadenaDouble(const string& str) {
         try {
             return stod(str);
         } catch (...) {
@@ -28,7 +28,7 @@ namespace utilidad {
         }
     }
 
-    inline char convierteMAYUminu(char c) {     //convierte carácter mayúscula a minúscula
+    inline char convierteMayuAminu(char c) {     //convierte carácter mayúscula a minúscula
         return (c >= 'A' && c <= 'Z') ? c +32 : c;
     }
 }

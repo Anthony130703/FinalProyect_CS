@@ -9,21 +9,21 @@
 class HojaCalculo
 {
     private:
-    vector<vector<Celda>> grid; // generar las celdas y que cada celda contenga un objeto de class celda
+    vector<vector<Celda>> red; // generar las celdas y que cada celda contenga un objeto de class celda
     //generando las etiquetas para las filas (A,B,..)
     string GenerarLetraFila(int indice) const;
     //evaluar las expresiones =A1+B2
-    auto EvaluarExpresion(const string& expresion) const;
+    double EvaluarExpresion(const string& expresion) const;
     //covirtiendo uan referencia de una celda a indices de fila y columna
     bool ConvertirCelda( const string& ref, int& fila, int& columna) const;
     //convertir una expresion de una celda infija a posfija para evaluarla 
     string InfijaAposFija(const string& expresion) const;
     //evaluando la expresion posfija
-    auto EvaluandoPosfija(const string& postfija) const;
+    double EvaluandoPosfija(const string& postfija) const;
     //validand rangos de celda
     bool CeldaEnRango(int fila, int columna) const;
     //creando soporte para funciones
-    auto EvaluarFuncion(const string& funcion, const string& range) const;
+    double EvaluarFuncion(const string& funcion, const string& rango) const;
 
     public:
     HojaCalculo(int fila, int columna); //aqui esta el constructor que inicializa la hoja de calculo
@@ -32,7 +32,7 @@ class HojaCalculo
     //para obtener el contenido textual de la celda
     string ObtenerContenidoCelda(int fila, int columna) const;
     //obteniendo el valor numerico elavuado de una celda
-    auto ObtenerValorCelda(int fila, int columna) const;
+    double ObtenerValorCelda(int fila, int columna) const;
     //mostrando la hoja de calcula en la pantalla
     void mostrar() const;
 

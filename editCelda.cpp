@@ -2,7 +2,7 @@
 
 using namespace std;
 
-void EditCelda(hojaCalculo& hoja)
+void EditCelda(HojaCalculo& hoja)
 {
     string letraFila;
     int columna;
@@ -25,6 +25,6 @@ void EditCelda(hojaCalculo& hoja)
     fila -= 1; //ajustando el indice a 0
 
     //asignando el contenido a la celda
-    hoja.setceldaContenido(fila, columna - 1, contenido);
+    hoja.EstablecerContenidoCelda(fila, columna - 1, contenido);
     cout << "Celda actualizada correctamente.\n";
 }
