@@ -1,0 +1,35 @@
+#ifndef HOJACALCULO_H
+#define HOJACALCULO_H
+
+#include "celda.h"
+#include <vector> // para hacer las celdas
+#include <string>
+#include <stdexcept> // libreria para manejar excepciones
+
+class HojaCalculo
+{
+    private:
+    vector<vector<Celda>> grid; // generar las celdas y que cada celda contenga un objeto de class celda
+    //generando las etiquetas para las filas (A,B,..)
+    string GenerarLetraFila(int indice) const;
+    //evaluar las expresiones =A1+B2
+    auto EvaluarExpresion(const string& expresion) const;
+    //covirtiendo uan referencia de una celda a indices de fila y columna
+    bool ConvertirCelda( const string& ref, int& fila, int& columna) const;
+    //convertir una expresion de una celda infija a posfija para evaluarla 
+    auto InfijaAposFija(const string& expresion) const;
+    //evaluando la expresion posfija
+    auto EvaluandoPosfija(const string& postfija) const;
+    //validand rangos de celda
+    bool CeldaEnRango(int fila, int columna) const;
+    //creando soporte para funciones
+    auto EvaluarFuncion(const string& funcion, const string& range) const;
+
+    public:
+    HojaCalculo(int fila, int columna);
+
+
+
+}
+
+#endif //HOJACALCULO_H
