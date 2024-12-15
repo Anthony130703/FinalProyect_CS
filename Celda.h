@@ -2,14 +2,18 @@
 #define CELDA_H
 
 #include <string>   
+using namespace std;
 
-class Celda {
+class Celda 
+{
 private:
-    std::string content; // Contenido de la celda}
+    string contenido; // Contenido de la celda}
 
 public:
-    Celda();
-    void setContent(const std::string& value);
-    std::string getContent() const;
-    double getNumericValue() const; // Convierte el contenido a número, si aplica
-}
+    Celda(); // contructor de la celda
+    void EstablecerContenido(const string& valor);
+    string ObtenerContenido() const;
+    auto ObtenerValorNumerico() const; //convierte el contenido a número, si aplica
+};
+
+#endif //CELDA_H

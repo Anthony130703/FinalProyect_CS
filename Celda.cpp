@@ -1,21 +1,21 @@
-#include "Celda.h"
 #include <stdexcept>
-#include <cstdlib>
+#include "Celda.h"
+using namespace std;
 
-Celda::Celda() : content("") {}
+Celda::Celda() : contenido("") {}
 
-void Celda::setContent(const std::string& value) {
-    content = value;
+void Celda::EstablecerContenido(const string& valor) {
+    contenido = valor;
 }
 
-std::string Celda::getContent() const {
-    return content;
+std::string Celda::ObtenerContenido() const {
+    return contenido;
 }
 
-double Celda::getNumericValue() const{
+auto Celda::ObtenerValorNumerico() const{
     try{
-        return std::stod(content);
-    } catch( const std::invalid_argument&) {
+        return stod(contenido);//funcion para convertir el string a un double
+    } catch( const invalid_argument&) {
         return 0.0;// si no es un número, retorna a 0   
     }
 }

@@ -1,10 +1,10 @@
 #ifndef HOJACALCULO_H
 #define HOJACALCULO_H
 
-#include "celda.h"
 #include <vector> // para hacer las celdas
 #include <string>
 #include <stdexcept> // libreria para manejar excepciones
+#include "Celda.h"
 
 class HojaCalculo
 {
